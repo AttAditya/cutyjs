@@ -46,6 +46,7 @@ def _check_closing_line(line: str | None) -> bool:
   stripped = line.strip()
   closings = [
     "]", ")", "}",
+    "</", "/>", ">"
   ]
 
   return any(stripped.startswith(closing) for closing in closings)

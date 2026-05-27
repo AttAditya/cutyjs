@@ -1,24 +1,24 @@
-# [CutyPy](https://pypi.org/project/cutypy/)
+# [CutyJS](https://pypi.org/project/cutyjs/)
 
-> CutyPy currently doesn't obey PEP 8 in many cases. It is a work in progress and may not be ready for production use. Use with caution and report any issues you encounter.
+> CutyJS currently doesn't obey PEP 8 in many cases. It is a work in progress and may not be ready for production use. Use with caution and report any issues you encounter.
 
-A lightweight Python code formatter.
+A lightweight JavaScript/TypeScript code formatter.
 
 ## Installation
 
-`pip install cutypy`
+`pip install cutyjs`
 
 ## About
 
-CutyPy is a minimal and fast Python formatter designed to enforce consistent formatting rules across Python codebases.
+CutyJS is a minimal and fast JavaScript/TypeScript formatter designed to enforce consistent formatting rules across JS/TS codebases.
 
-Unlike large formatters that heavily restructure code, CutyPy focuses on deterministic formatting rules applied through a small rule engine. Each rule handles a specific formatting concern such as indentation, spacing, blank lines, or import ordering.
+Unlike large formatters that heavily restructure code, CutyJS focuses on deterministic formatting rules applied through a small rule engine. Each rule handles a specific formatting concern such as indentation, spacing, blank lines, or import ordering.
 
 The formatter processes files using modular formatting rules, making the system easier to reason about, extend, and control.
 
 ## Features
 
-- Deterministic Python formatting
+- Deterministic JavaScript/TypeScript formatting
 - Rule-based formatting system
 - Import sorting
 - Consistent indentation enforcement
@@ -32,17 +32,17 @@ The formatter processes files using modular formatting rules, making the system 
 
 Format a file or directory:
 
-`cutypy path/to/file_or_directory`
+`cutyjs path/to/file_or_directory`
 
 Check if files need formatting (useful for CI or pre-commit):
 
-`cutypy --check path/to/project`
+`cutyjs --check path/to/project`
 
-If formatting changes are required in check mode, CutyPy exits with a non-zero status code.
+If formatting changes are required in check mode, CutyJS exits with a non-zero status code.
 
 ## Formatting Rules
 
-CutyPy applies a set of focused formatting rules:
+CutyJS applies a set of focused formatting rules:
 
 - Blank line normalization
 - Declaration spacing adjustments
@@ -60,7 +60,7 @@ Each rule operates independently, allowing the formatter to remain simple and pr
 ## Project Structure
 
 ```tree
-cutypy
+cutyjs
 ├── __init__.py
 ├── fmt.py
 ├── format_file.py
@@ -84,7 +84,7 @@ cutypy
 
 ## Design Philosophy
 
-CutyPy is built around a few core ideas:
+CutyJS is built around a few core ideas:
 
 - Minimal implementation
 - Explicit formatting rules
@@ -100,7 +100,7 @@ Experimental and under active development.
 
 ## Links
 
-- [PyPI](https://pypi.org/project/cutypy/)
-- [GitHub](https://github.com/AttAditya/cutypy)
+- [PyPI](https://pypi.org/project/cutyjs/)
+- [GitHub](https://github.com/AttAditya/cutyjs)
 
 > Made by AttAditya

@@ -1,5 +1,5 @@
-from cutypy.models.content import Content
-from cutypy.solver.fix_line_ends import fix_line_ends
+from cutyjs.models.content import Content
+from cutyjs.solver.fix_line_ends import fix_line_ends
 
 from langex.core.testing import discover_test, expects
 

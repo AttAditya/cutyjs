@@ -1,4 +1,4 @@
-from cutypy.core.main import cli_entry
+from cutyjs.core.main import cli_entry
 
 def main():
   cli_entry()

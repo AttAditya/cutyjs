@@ -2,7 +2,7 @@ from pathlib import Path
 
 from tomllib import load
 
-from cutypy.models.args import Args
+from cutyjs.models.args import Args
 
 from langex.core.functions import autosig
 
@@ -14,7 +14,7 @@ def version_interference(args: Args) -> Args:
     return args
 
   try:
-    installed_version = version("cutypy")
+    installed_version = version("cutyjs")
   except Exception:
     ROOT = Path(__file__).resolve().parents[2]
     pyproject = ROOT / "pyproject.toml"
@@ -24,7 +24,7 @@ def version_interference(args: Args) -> Args:
 
     installed_version = data["project"]["version"]
 
-  print(f"CutyPy {installed_version}")
+  print(f"CutyJS {installed_version}")
 
   return Args()
 

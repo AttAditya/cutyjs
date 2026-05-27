@@ -1,4 +1,4 @@
-from cutypy.models.content import Content
+from cutyjs.models.content import Content
 
 from langex.core.functions import autosig
 from langex.core.pipeline import Pipeline
@@ -62,10 +62,13 @@ _compact_pipeline = (
   Pipeline
   | _create_char_compaction("\'", "single-quoted-string")
   | _create_char_compaction("\"", "double-quoted-string")
+  | _create_char_compaction("`", "template-literal")
   | _create_char_compaction("\'", "single-quoted-string")
   | _create_char_compaction("\"", "double-quoted-string")
+  | _create_char_compaction("`", "template-literal")
   | _create_char_compaction("\'", "single-quoted-string")
   | _create_char_compaction("\"", "double-quoted-string")
+  | _create_char_compaction("`", "template-literal")
 )
 
 @autosig

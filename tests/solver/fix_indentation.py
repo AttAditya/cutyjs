@@ -1,5 +1,5 @@
-from cutypy.models.content import Content
-from cutypy.solver.fix_indentation import fix_indentation
+from cutyjs.models.content import Content
+from cutyjs.solver.fix_indentation import fix_indentation
 
 from langex.core.testing import discover_test, expects
 

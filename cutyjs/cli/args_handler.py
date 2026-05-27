@@ -2,7 +2,7 @@ from os import getcwd
 
 from sys import argv
 
-from cutypy.models.args import Args
+from cutyjs.models.args import Args
 
 from langex.core.functions import autosig
 

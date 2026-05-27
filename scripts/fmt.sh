@@ -1,1 +1,1 @@
-cutypy $@
+cutyjs $@

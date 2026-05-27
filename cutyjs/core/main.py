@@ -1,6 +1,6 @@
-from cutypy.cli.args_handler import get_cli_args
-from cutypy.cli.version import version_interference
-from cutypy.engine.worker import start_engine
+from cutyjs.cli.args_handler import get_cli_args
+from cutyjs.cli.version import version_interference
+from cutyjs.engine.worker import start_engine
 
 from langex.core.pipeline import Pipeline
 

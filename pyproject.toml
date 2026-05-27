@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "cutypy"
+name = "cutyjs"
 version = "0.2.5"
-description = "A lightweight rule-based Python code formatter"
+description = "A lightweight rule-based JavaScript/TypeScript code formatter"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.12"
@@ -16,7 +16,7 @@ dependencies = [
   "langex"
 ]
 
-keywords = ["python", "formatter", "code-formatter", "lint", "formatting"]
+keywords = ["javascript", "typescript", "formatter", "code-formatter", "lint", "formatting"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
@@ -28,13 +28,13 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/AttAditya/cutypy"
-Repository = "https://github.com/AttAditya/cutypy"
-Issues = "https://github.com/AttAditya/cutypy/issues"
+Homepage = "https://github.com/AttAditya/cutyjs"
+Repository = "https://github.com/AttAditya/cutyjs"
+Issues = "https://github.com/AttAditya/cutyjs/issues"
 
 [project.scripts]
-cutypy = "cutypy.__main__:main"
+cutyjs = "cutyjs.__main__:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["cutypy*"]
+include = ["cutyjs*"]

@@ -1,4 +1,4 @@
-from cutypy.models.content import Content
+from cutyjs.models.content import Content
 
 from langex.core.functions import autosig
 

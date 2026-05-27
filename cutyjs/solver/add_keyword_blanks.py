@@ -1,13 +1,6 @@
-from cutypy.models.content import Content
+from cutyjs.models.content import Content
 
 from langex.core.functions import autosig
-
-from langex.core.classes import (
-  abstract,
-  extends,
-  interface,
-  implements,
-)
 
 def _get_indent(line: str | None) -> int:
   if line is None:
@@ -21,9 +14,10 @@ def _check_keyword_line(line: str | None) -> bool:
 
   stripped = line.strip()
   keywords = [
-    "def ", "class ", "@", "if ", "raise ",
-    "try:", "for ", "while ", "with ", "async ",
+    "function ", "class ", "if ", "throw ",
+    "try", "for ", "while ", "switch ", "async ",
     "return ", "continue ", "break ", "yield ",
+    "export ", "import ",
   ]
 
   return any(stripped.startswith(keyword) for keyword in keywords)
@@ -34,7 +28,7 @@ def _check_ignoring_keyword_line(line: str | None) -> bool:
 
   stripped = line.strip()
   keywords = [
-    "elif ", "else:", "except ", "finally:",
+    "else if ", "else", "catch ", "finally",
   ]
 
   return any(stripped.startswith(keyword) for keyword in keywords)

@@ -1,5 +1,5 @@
-from cutypy.models.content import Content
-from cutypy.solver.fix_double_blanks import fix_double_blanks
+from cutyjs.models.content import Content
+from cutyjs.solver.fix_double_blanks import fix_double_blanks
 
 from langex.core.testing import discover_test, expects
 

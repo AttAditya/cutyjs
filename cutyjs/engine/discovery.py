@@ -5,7 +5,7 @@ from langex.core.functions import autosig
 
 @autosig
 def should_ignore(path: str) -> bool:
-  if path.endswith("__pycache__"):
+  if path.endswith("__pycache__") or "node_modules" in path:
     return True
 
   if path.split("/")[-1].startswith("."):
@@ -29,7 +29,7 @@ def discover(base_path: str) -> list[str]:
 
       if isdir(entry_path):
         dir_queue.append(entry_path)
-      elif entry_path.endswith(".py"):
+      elif entry_path.endswith((".js", ".ts", ".jsx", ".tsx")):
         files.append(entry_path)
 
   return files

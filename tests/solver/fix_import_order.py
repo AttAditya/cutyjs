@@ -1,5 +1,5 @@
-from cutypy.models.content import Content
-from cutypy.solver.fix_import_order import fix_import_order
+from cutyjs.models.content import Content
+from cutyjs.solver.fix_import_order import fix_import_order
 
 from langex.core.testing import discover_test, expects
 

@@ -1,1 +1,1 @@
-export DEV_APP="cutypy"
+export DEV_APP="cutyjs"

@@ -1,10 +1,10 @@
 from os.path import join, abspath, isfile
 
-from cutypy.engine.discovery import discover
-from cutypy.engine.pipelines.check import check_pipeline
-from cutypy.engine.pipelines.solve import solve_pipeline
-from cutypy.models.args import Args
-from cutypy.models.content import Content
+from cutyjs.engine.discovery import discover
+from cutyjs.engine.pipelines.check import check_pipeline
+from cutyjs.engine.pipelines.solve import solve_pipeline
+from cutyjs.models.args import Args
+from cutyjs.models.content import Content
 
 from langex.core.functions import autosig
 

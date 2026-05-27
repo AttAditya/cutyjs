@@ -1,5 +1,5 @@
-from cutypy.checker.check_line_length import check_line_length
-from cutypy.models.content import Content
+from cutyjs.checker.check_line_length import check_line_length
+from cutyjs.models.content import Content
 
 from langex.core.testing import discover_test, expects
 

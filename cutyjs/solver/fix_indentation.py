@@ -37,7 +37,7 @@ def fix_indentation(content: Content) -> Content:
   for level, line in lines:
     result += ("  " * level) + line + "\n"
 
-  content.content = result
+  content.content = result[:-1]
 
   return content
 

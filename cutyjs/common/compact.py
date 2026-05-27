@@ -12,6 +12,7 @@ def _compact_code(
   escaped = False
   working = False
   current = ""
+  new_keys = set()
 
   def create_compaction_key(text: str) -> str:
     text_id = hash(text)
@@ -28,6 +29,7 @@ def _compact_code(
     if char == type_char and not escaped:
       if working:
         key = create_compaction_key(current)
+        new_keys.add(key)
         content.compactions[key] = {
           "expansion": current,
           "type_char": type_char,
@@ -43,7 +45,7 @@ def _compact_code(
     if working:
       current += char
 
-  for value in content.compactions:
+  for value in new_keys:
     compaction = content.compactions[value]
     expansion = compaction["expansion"]
     type_char = compaction["type_char"]
@@ -60,8 +62,6 @@ def _create_char_compaction(type_char: str, compaction_type: str):
 
 _compact_pipeline = (
   Pipeline
-  | _create_char_compaction("\'", "single-quoted-string")
-  | _create_char_compaction("\"", "double-quoted-string")
   | _create_char_compaction("`", "template-literal")
   | _create_char_compaction("\'", "single-quoted-string")
   | _create_char_compaction("\"", "double-quoted-string")
@@ -69,6 +69,8 @@ _compact_pipeline = (
   | _create_char_compaction("\'", "single-quoted-string")
   | _create_char_compaction("\"", "double-quoted-string")
   | _create_char_compaction("`", "template-literal")
+  | _create_char_compaction("\'", "single-quoted-string")
+  | _create_char_compaction("\"", "double-quoted-string")
 )
 
 @autosig

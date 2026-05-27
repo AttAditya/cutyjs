@@ -12,10 +12,10 @@ from langex.core.pipeline import Pipeline
 
 solve_pipeline = (
   Pipeline
+  | fix_import_order
   | compact
   | fix_indentation
   | fix_line_ends
-  | fix_import_order
   | remove_blanks
   | add_keyword_blanks
   | fix_double_blanks

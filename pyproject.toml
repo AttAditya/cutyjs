@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cutypy"
+version = "0.2.5"
+description = "A lightweight rule-based Python code formatter"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+authors = [
+  { name = "AttAditya" }
+]
+dependencies = [
+  "langex"
+]
+
+keywords = ["python", "formatter", "code-formatter", "lint", "formatting"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Code Generators",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Homepage = "https://github.com/AttAditya/cutypy"
+Repository = "https://github.com/AttAditya/cutypy"
+Issues = "https://github.com/AttAditya/cutypy/issues"
+
+[project.scripts]
+cutypy = "cutypy.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cutypy*"]

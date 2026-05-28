@@ -12,19 +12,10 @@ def _is_import_start_line(line: str) -> bool:
   if line.startswith("import "):
     return True
 
-  if line.startswith("from "):
-    return True
-
   return False
 
 def _is_import_end_line(line: str) -> bool:
-  if line.startswith("import "):
-    return True
-
-  if ")" in line:
-    return True
-
-  if line.startswith("from ") and "(" not in line:
+  if line.endswith((";", "\'", "\"", "`")):
     return True
 
   return False
@@ -127,22 +118,4 @@ def fix_import_order(content: Content) -> Content:
   }
 
   return content
-
-{
-  'import_plain': [
-    'import fs from "fs"',
-    'import utils from "../utils"',
-    'import lodash from "lodash"',
-    'import React from "react"',
-    'import App from "./App"',
-    'import "./styles.css"',
-    'import { Button } from "@/components/Button"'
-  ],
-  'import_alias': [],
-  'import_multi': [],
-  'from_plain': [],
-  'from_alias': [],
-  'from_paren': [],
-  'garbage': []
-}
 

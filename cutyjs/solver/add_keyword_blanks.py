@@ -21,7 +21,7 @@ def _check_keyword_line(line: str | None) -> bool:
   ]
 
   endwords = [
-    "{", "[", "(", "<",
+    "{", "[", "(", "<", ","
   ]
 
   return any([

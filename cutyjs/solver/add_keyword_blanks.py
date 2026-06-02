@@ -20,7 +20,14 @@ def _check_keyword_line(line: str | None) -> bool:
     "export ", "import ",
   ]
 
-  return any(stripped.startswith(keyword) for keyword in keywords)
+  endwords = [
+    "{", "[", "(", "<",
+  ]
+
+  return any([
+    *(stripped.startswith(keyword) for keyword in keywords),
+    *(stripped.endswith(endword) for endword in endwords),
+  ])
 
 def _check_ignoring_keyword_line(line: str | None) -> bool:
   if line is None:
